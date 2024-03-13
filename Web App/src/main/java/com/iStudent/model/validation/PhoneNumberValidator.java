@@ -7,6 +7,6 @@ public class PhoneNumberValidator implements ConstraintValidator<PhoneNumber, St
 
     @Override
     public boolean isValid(String phoneNumber, ConstraintValidatorContext context) {
-        return phoneNumber.length() == 10;
+        return phoneNumber.length() == 9;
     }
 }
