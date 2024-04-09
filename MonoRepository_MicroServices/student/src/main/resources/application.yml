@@ -16,7 +16,7 @@ spring:
     import: optional:configserver:http://localhost:8888
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jbdc:mysql://localhost:3306/students
+    url: jdbc:mysql://localhost:3306/students
     username: username
     password: password
   jpa:
