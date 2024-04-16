@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: parents
+  config:
+    import: optional:configserver:http://localhost:8888

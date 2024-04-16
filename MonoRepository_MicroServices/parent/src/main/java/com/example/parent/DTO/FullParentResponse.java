@@ -1,6 +1,5 @@
-package com.example.parent;
+package com.example.parent.DTO;
 
-import jakarta.persistence.Entity;
 import lombok.*;
 
 import java.util.List;
@@ -20,7 +19,7 @@ public class FullParentResponse {
     private Integer age;
     private String gender;
     private String email;
-
     private List<Student> students;
+    private Town town;
 
 }

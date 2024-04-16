@@ -1,6 +1,5 @@
-package com.example.student;
+package com.example.student.DTO;
 
-import jakarta.persistence.Entity;
 import lombok.*;
 
 @Getter
@@ -12,4 +11,5 @@ public class StudentFullResponse {
     private String name;
     private String email;
     private Parent parent;
+    private Town town;
 }

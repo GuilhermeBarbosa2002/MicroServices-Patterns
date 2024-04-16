@@ -1,4 +1,4 @@
-package com.example.parent;
+package com.example.parent.Client;
 
 import com.example.parent.DTO.Student;
 import org.springframework.cloud.openfeign.FeignClient;

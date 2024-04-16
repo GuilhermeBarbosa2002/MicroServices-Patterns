@@ -1,10 +1,9 @@
-package com.example.student;
+package com.example.student.Client;
 
+import com.example.student.DTO.Parent;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import java.util.List;
 
 @FeignClient(name = "parent-service", url = "${application.config.parents-url}")
 public interface ParentClient {

@@ -1,4 +1,4 @@
-package com.example.student;
+package com.example.student.DTO;
 
 import jakarta.persistence.Entity;
 import lombok.*;
@@ -18,5 +18,7 @@ public class Parent {
     private Integer age;
     private String gender;
     private String email;
+    private Integer student;
+    private Integer town;
 
 }

@@ -1,15 +1,34 @@
 version: '3.8'
 
+name: postgres
+
 services:
-  db:
-    image: mysql:latest
-    container_name: mysql-container
-    ports:
-      - "3306:3306"
+  db-postgres:
+    container_name: database
+    image: postgres:14.1-alpine
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: students
-      MYSQL_USER: username
-      MYSQL_PASSWORD: password
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
     volumes:
-      - ./data:/var/lib/mysql
+      - db:/var/lib/postgresql/data
+  pgadmin-compose:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "PgAdmin2019!"
+    ports:
+      - "16543:80"
+    depends_on:
+      - db-postgres
+
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+volumes:
+  db:
+    driver: local

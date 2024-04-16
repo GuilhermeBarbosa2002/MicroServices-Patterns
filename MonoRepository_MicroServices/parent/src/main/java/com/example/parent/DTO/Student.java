@@ -1,4 +1,4 @@
-package com.example.parent;
+package com.example.parent.DTO;
 
 import lombok.*;
 
@@ -11,4 +11,5 @@ public class Student {
     private String name;
     private String email;
     private Integer parent;
+    private Integer town;
 }

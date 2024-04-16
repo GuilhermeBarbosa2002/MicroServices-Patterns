@@ -1,5 +1,6 @@
 package com.example.student;
 
+import com.example.student.DTO.StudentFullResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,4 +23,17 @@ public class StudentController {
     public ResponseEntity<List<Student>> getAllStudents(){
         return ResponseEntity.ok(studentService.getStudents());
     }
+
+    @GetMapping("parent/{parent-id}")
+    public ResponseEntity<List<Student>>getAllStudents(@PathVariable("parent-id") Integer parentId){
+        return ResponseEntity.ok(studentService.getAllStudentsByParent(parentId));
+    }
+
+    @GetMapping("{student-id}")
+    public ResponseEntity<StudentFullResponse>getFullStudent(@PathVariable("student-id") Integer studentId){
+        return ResponseEntity.ok(studentService.getFullResponseStudent(studentId));
+    }
+
+
+
 }
