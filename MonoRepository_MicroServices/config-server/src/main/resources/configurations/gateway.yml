@@ -21,6 +21,10 @@ spring:
           predicates:
             - Path=/api/v1/towns/**
           uri: http://localhost:8060
+        - id: employees
+          predicates:
+            - Path=/api/v1/employees/**
+          uri: http://localhost:8050
 
 management:
   tracing:

@@ -11,8 +11,9 @@
         <module name="parent" />
         <module name="town" />
         <module name="student" />
-        <module name="gateway" />
         <module name="discovery" />
+        <module name="employee" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.6" />
@@ -21,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="employee" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="parent" options="-parameters" />
       <module name="student" options="-parameters" />
