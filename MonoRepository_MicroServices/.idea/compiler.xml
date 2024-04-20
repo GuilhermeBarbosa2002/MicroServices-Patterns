@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="parent" />
+        <module name="teacher" />
         <module name="town" />
         <module name="student" />
         <module name="discovery" />
@@ -28,6 +29,7 @@
       <module name="mark" options="-parameters" />
       <module name="parent" options="-parameters" />
       <module name="student" options="-parameters" />
+      <module name="teacher" options="-parameters" />
       <module name="town" options="-parameters" />
     </option>
   </component>
