@@ -14,6 +14,7 @@
         <module name="discovery" />
         <module name="employee" />
         <module name="gateway" />
+        <module name="mark" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.6" />
@@ -24,6 +25,7 @@
       <module name="discovery" options="-parameters" />
       <module name="employee" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="mark" options="-parameters" />
       <module name="parent" options="-parameters" />
       <module name="student" options="-parameters" />
       <module name="town" options="-parameters" />
