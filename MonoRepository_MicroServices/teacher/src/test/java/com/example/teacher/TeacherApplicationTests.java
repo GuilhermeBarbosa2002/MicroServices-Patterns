@@ -1,10 +1,10 @@
-package com.example.configserver;
+package com.example.teacher;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigServerApplicationTests {
+class TeacherApplicationTests {
 
 	@Test
 	void contextLoads() {
