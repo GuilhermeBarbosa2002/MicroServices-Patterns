@@ -13,15 +13,27 @@
         <module name="town" />
         <module name="student" />
         <module name="discovery" />
+        <module name="club" />
         <module name="employee" />
         <module name="gateway" />
         <module name="mark" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.6" />
+    <bytecodeTargetLevel target="1.6">
+      <module name="config-server" target="21" />
+      <module name="discovery" target="21" />
+      <module name="employee" target="21" />
+      <module name="gateway" target="21" />
+      <module name="mark" target="21" />
+      <module name="parent" target="21" />
+      <module name="student" target="21" />
+      <module name="teacher" target="1.5" />
+      <module name="town" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="club" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="employee" options="-parameters" />
