@@ -1,0 +1,5 @@
+CREATE DATABASE students;
+CREATE DATABASE parents; 
+CREATE DATABASE towns; 
+CREATE DATABASE employees; 
+CREATE DATABASE marks;

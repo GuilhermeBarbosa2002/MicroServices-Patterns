@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -5,4 +6,13 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/MonoRepository_MicroServices.iml" filepath="$PROJECT_DIR$/.idea/MonoRepository_MicroServices.iml" />
     </modules>
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MonoRepository_MicroServices.iml" filepath="$PROJECT_DIR$/.idea/MonoRepository_MicroServices.iml" />
+    </modules>
+  </component>
+>>>>>>> ddef7c062bf0991b4543c89e086f1d7d3012f747
 </project>
