@@ -29,7 +29,7 @@
       <module name="mark" options="-parameters" />
       <module name="parent" options="-parameters" />
       <module name="student" options="-parameters" />
-      <module name="teacher" options="-parameters" />
+      <module name="teacher" options="" />
       <module name="town" options="-parameters" />
     </option>
   </component>
