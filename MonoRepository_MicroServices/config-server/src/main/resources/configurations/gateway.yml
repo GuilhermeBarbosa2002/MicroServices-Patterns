@@ -29,7 +29,18 @@ spring:
           predicates:
             - Path=/api/v1/marks/**
           uri: http://localhost:8040
-
+        - id: teachers
+          predicates:
+            - Path=/api/v1/teachers/**
+          uri: http://localhost:8030
+        - id: clubs
+          predicates:
+            - Path=/api/v1/clubs/**
+          uri: http://localhost:8020
+        - id: apiexterna
+          predicates:
+            - Path=/api/v1/apiexterna/**
+          uri: http://localhost:8010
 management:
   tracing:
     sampling:

@@ -21,6 +21,11 @@ public class TownService {
             return townRepository.findAll();
         }
 
+        public Integer getIdByName(String name){
+            Optional<Town> town = townRepository.findTownByName(name);
+            return town.get().getId();
+        }
+
         public Town getTownById(Integer id){
             var parent = townRepository.findById(id).orElse(Town.builder().name("NOT_FOUND").country("NOT_FOUND").build());
             return parent;

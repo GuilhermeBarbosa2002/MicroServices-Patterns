@@ -9,30 +9,25 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="parent" />
-        <module name="teacher" />
+        <module name="apiExterna" />
         <module name="town" />
         <module name="student" />
         <module name="discovery" />
-        <module name="club" />
         <module name="employee" />
         <module name="gateway" />
         <module name="mark" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.6">
-      <module name="config-server" target="21" />
-      <module name="discovery" target="21" />
-      <module name="employee" target="21" />
-      <module name="gateway" target="21" />
-      <module name="mark" target="21" />
-      <module name="parent" target="21" />
-      <module name="student" target="21" />
-      <module name="teacher" target="1.5" />
-      <module name="town" target="21" />
+      <module name="club" target="21" />
+      <module name="student (1)" target="21" />
+      <module name="student (2)" target="21" />
+      <module name="teacher" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apiExterna" options="-parameters" />
       <module name="club" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
@@ -41,7 +36,9 @@
       <module name="mark" options="-parameters" />
       <module name="parent" options="-parameters" />
       <module name="student" options="-parameters" />
-      <module name="teacher" options="" />
+      <module name="student (1)" options="-parameters" />
+      <module name="student (2)" options="-parameters" />
+      <module name="teacher" options="-parameters" />
       <module name="town" options="-parameters" />
     </option>
   </component>
