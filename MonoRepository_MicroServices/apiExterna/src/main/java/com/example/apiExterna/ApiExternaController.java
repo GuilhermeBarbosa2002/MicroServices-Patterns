@@ -1,6 +1,8 @@
 package com.example.apiExterna;
 
 
+import com.example.apiExterna.DTO.Parent;
+import com.example.apiExterna.DTO.Student;
 import com.example.apiExterna.DTO.Town;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,10 +15,22 @@ import org.springframework.web.bind.annotation.*;
 public class ApiExternaController {
     private final ApiExternaService apiExternaService;
 
-    @PostMapping
+    @PostMapping("/town")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addCity(@RequestBody Town town){
+    public void addTown(@RequestBody Town town){
         apiExternaService.addTown(town);
+    }
+
+    @PostMapping("/parent")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void addParent(@RequestBody Parent parent){
+        apiExternaService.addParent(parent);
+    }
+
+    @PostMapping("/student")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void addStudent(@RequestBody Student student){
+        apiExternaService.addStudent(student);
     }
 
     @GetMapping

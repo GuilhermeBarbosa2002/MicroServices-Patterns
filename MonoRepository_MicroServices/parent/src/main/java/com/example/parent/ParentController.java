@@ -16,8 +16,10 @@ public class ParentController {
     private final ParentService parentService;
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void addParent(@RequestBody Parent parent){
+    public Integer addParent(@RequestBody Parent parent){
+
         parentService.addParent(parent);
+        return parentService.getIdByEmail(parent.getEmail());
     }
 
     @GetMapping

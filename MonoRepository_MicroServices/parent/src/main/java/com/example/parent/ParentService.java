@@ -3,10 +3,12 @@ package com.example.parent;
 import com.example.parent.Client.StudentClient;
 import com.example.parent.Client.TownClient;
 import com.example.parent.DTO.FullParentResponse;
+import com.example.town.Town;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -22,6 +24,11 @@ public class ParentService {
 
     public List<Parent> getParents(){
         return parentRepository.findAll();
+    }
+
+    public Integer getIdByEmail(String email){
+        Optional<Parent> parent = parentRepository.findParentByEmail(email);
+        return parent.get().getId();
     }
 
     public FullParentResponse getParentsWithStudents(Integer parentId) {
