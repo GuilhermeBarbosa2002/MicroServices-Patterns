@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class ApiExternaController {
     private final ApiExternaService apiExternaService;
 
-    @PostMapping("/town")
+/*    @PostMapping("/town")
     @ResponseStatus(HttpStatus.CREATED)
     public void addTown(@RequestBody Town town){
         apiExternaService.addTown(town);
@@ -25,7 +25,7 @@ public class ApiExternaController {
     @ResponseStatus(HttpStatus.CREATED)
     public void addParent(@RequestBody Parent parent){
         apiExternaService.addParent(parent);
-    }
+    }*/
 
     @PostMapping("/student")
     @ResponseStatus(HttpStatus.CREATED)

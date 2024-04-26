@@ -1,18 +1,19 @@
 package com.example.club;
 
+import com.example.club.DTO.ClubFullResponse;
+import com.example.club.Client.TownClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 
-
 public class ClubService {
     private final ClubRepository clubRepository;
+    private final TownClient townClient;
 
     public List<Club> getClubs() {
         return clubRepository.findAll();
@@ -24,7 +25,14 @@ public class ClubService {
     }
 
 
-    public Optional<Club> getClub(Integer club) {
-        return clubRepository.findById(club);
+    public ClubFullResponse getFullResponseClub(Integer clubId) {
+        var club = clubRepository.findById(clubId).orElse(Club.builder().name("NOT_FOUND").description("NOT_FOUND").build());
+        var town = townClient.getTownById(club.getTown());
+        return ClubFullResponse.builder()
+                .name(club.getName())
+                .description(club.getDescription())
+                .town(town).
+                build();
+
     }
 }

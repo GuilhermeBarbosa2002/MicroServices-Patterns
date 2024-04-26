@@ -16,5 +16,6 @@ public class Town {
     private Integer id;
     private String country;
     private String name;
+    private Integer people;
 
 }

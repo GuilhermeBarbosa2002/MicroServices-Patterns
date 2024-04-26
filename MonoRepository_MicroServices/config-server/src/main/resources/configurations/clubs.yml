@@ -20,6 +20,9 @@ spring:
     database: mysql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
+application:
+  config:
+    towns-url: http://localhost:8060/api/v1/towns
 
 management:
   tracing:

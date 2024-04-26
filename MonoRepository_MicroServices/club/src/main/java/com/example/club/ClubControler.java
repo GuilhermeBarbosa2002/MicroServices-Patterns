@@ -1,13 +1,13 @@
 package com.example.club;
 
 
+import com.example.club.DTO.ClubFullResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RequestMapping("/api/v1/clubs")
 @RestController
@@ -26,8 +26,8 @@ public class ClubControler {
     }
 
     @GetMapping("{club-id}")
-    public ResponseEntity<Optional<Club>> getClub(@PathVariable("club-id") Integer club){
-        return ResponseEntity.ok(clubService.getClub(club));
+    public ResponseEntity<ClubFullResponse> getClub(@PathVariable("club-id") Integer club){
+        return ResponseEntity.ok(clubService.getFullResponseClub(club));
 
     }
 

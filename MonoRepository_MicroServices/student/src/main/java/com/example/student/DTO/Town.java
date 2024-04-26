@@ -1,5 +1,6 @@
 package com.example.student.DTO;
 
+import jakarta.persistence.Id;
 import lombok.*;
 
 @Getter
@@ -11,5 +12,5 @@ public class Town {
 
     private String country;
     private String name;
-
+    private Integer people;
 }
