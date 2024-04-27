@@ -1,6 +1,7 @@
 package com.example.apiExterna;
 
 
+import com.example.apiExterna.DTO.Club;
 import com.example.apiExterna.DTO.Parent;
 import com.example.apiExterna.DTO.Student;
 import com.example.apiExterna.DTO.Town;
@@ -8,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequestMapping("/api/v1/apiexterna")
 @RestController
@@ -33,11 +36,10 @@ public class ApiExternaController {
         apiExternaService.addStudent(student);
     }
 
-    @GetMapping
-    public String HelloWorld(){
-        return "Ola mundo";
+    @GetMapping("/clubs/1000")
+    public List<Student> getStudentsWithClub1000(){
+        return apiExternaService.getStudentsWithClub1000();
     }
-
 
 
 

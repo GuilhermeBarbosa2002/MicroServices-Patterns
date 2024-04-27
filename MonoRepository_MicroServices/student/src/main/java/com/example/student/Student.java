@@ -17,4 +17,5 @@ public class Student {
     private String email;
     private Integer parent;
     private Integer town;
+    private Integer club;
 }

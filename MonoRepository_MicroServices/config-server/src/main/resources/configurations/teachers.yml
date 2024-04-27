@@ -21,6 +21,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 
+
 management:
   tracing:
     sampling:

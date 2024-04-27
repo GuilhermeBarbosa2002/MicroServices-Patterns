@@ -34,6 +34,11 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getFullResponseStudent(studentId));
     }
 
+    @GetMapping("clubs/{club-id}")
+    public List<Student> getStudentsByClubId(@PathVariable("club-id") Integer clubId){
+     return studentService.getAllStudentsByClub(clubId);
+    }
+
 
 
 }

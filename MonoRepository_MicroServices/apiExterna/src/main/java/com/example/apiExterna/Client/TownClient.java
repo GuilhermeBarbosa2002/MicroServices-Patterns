@@ -15,4 +15,7 @@ public interface TownClient {
     @ResponseStatus(HttpStatus.CREATED)
     Integer addTown(@RequestBody Town town);
 
+
+
+
 }

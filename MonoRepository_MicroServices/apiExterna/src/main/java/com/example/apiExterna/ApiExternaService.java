@@ -1,13 +1,16 @@
 package com.example.apiExterna;
 
 
+import com.example.apiExterna.Client.ClubClient;
 import com.example.apiExterna.Client.ParentClient;
 import com.example.apiExterna.Client.StudentClient;
 import com.example.apiExterna.Client.TownClient;
 import com.example.apiExterna.DTO.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,6 +19,33 @@ public class ApiExternaService {
     private final TownClient townClient;
     private final ParentClient parentClient;
     private final StudentClient studentClient;
+    private final ClubClient clubClient;
+
+
+
+    public List<Student> getStudentsWithClub1000() {
+        List<Club> clubs = clubClient.getAllClubs().getBody();
+        List<Club> clubsWith1000= new ArrayList<>();
+        List<Student> allStudents = new ArrayList<>();
+
+        for(Club club : clubs){
+            if(townClient.getTownById(club.getTown()).getPeople() > 1000){
+
+                clubsWith1000.add(club);
+            }
+        }
+
+        for(Club club : clubsWith1000){
+            List<Student> studentsOfCurrentClub = studentClient.getStudentsByClubId(club.getId());
+            allStudents.addAll(studentsOfCurrentClub);
+        }
+
+        return allStudents;
+
+
+
+    }
+
     public Integer addTown(Town town) {
         Integer id = townClient.addTown(town);
         System.err.println("-------------------------------- TOW:   " + id + "----------------------");

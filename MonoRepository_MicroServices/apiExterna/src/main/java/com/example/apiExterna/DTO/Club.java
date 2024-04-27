@@ -7,12 +7,11 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class StudentDTO {
+public class Club {
 
+    private Integer id;
+    private String description;
     private String name;
-    private String email;
     private Integer town;
-    private Integer parent;
-    private Integer club;
 
 }

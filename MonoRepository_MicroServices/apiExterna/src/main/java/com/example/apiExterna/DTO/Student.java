@@ -13,5 +13,6 @@ public class Student {
     private String email;
     private Town town;
     private Parent parent;
+    private Club club;
 
 }
