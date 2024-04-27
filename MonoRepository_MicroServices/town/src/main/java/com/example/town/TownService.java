@@ -13,17 +13,23 @@ public class TownService {
 
         private final TownRepository townRepository;
 
-        public void addTown(Town town){
+    public Integer addTown(Town town) {
+        if(townRepository.findTownByName(town.getName()) == null){
             townRepository.save(town);
+            return townRepository.findTownByName(town.getName()).getId();
+        }else {
+            return townRepository.findTownByName(town.getName()).getId();
         }
+
+    }
 
         public List<Town> getTowns(){
             return townRepository.findAll();
         }
 
         public Integer getIdByName(String name){
-            Optional<Town> town = townRepository.findTownByName(name);
-            return town.get().getId();
+            Town town = townRepository.findTownByName(name);
+            return town.getId();
         }
 
         public Town getTownById(Integer id){

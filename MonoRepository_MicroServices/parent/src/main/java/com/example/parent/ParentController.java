@@ -18,8 +18,7 @@ public class ParentController {
     @ResponseStatus(HttpStatus.CREATED)
     public Integer addParent(@RequestBody Parent parent){
 
-        parentService.addParent(parent);
-        return parentService.getIdByEmail(parent.getEmail());
+        return parentService.addParent(parent);
     }
 
     @GetMapping

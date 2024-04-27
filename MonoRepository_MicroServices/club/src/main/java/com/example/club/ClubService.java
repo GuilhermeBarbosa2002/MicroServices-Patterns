@@ -20,9 +20,13 @@ public class ClubService {
     }
 
     public Integer addClub(Club club) {
-        clubRepository.save(club);
+        if(clubRepository.findClubByName(club.getName()) == null){
+            clubRepository.save(club);
+            return clubRepository.findClubByName(club.getName()).getId();
+        }else {
+            return clubRepository.findClubByName(club.getName()).getId();
+        }
 
-        return clubRepository.findClubByName(club.getName()).getId();
     }
 
 

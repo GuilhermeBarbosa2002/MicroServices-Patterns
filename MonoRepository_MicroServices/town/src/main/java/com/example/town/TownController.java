@@ -16,8 +16,7 @@ public class TownController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Integer addTown(@RequestBody Town town){
-        townService.addTown(town);
-        return townService.getIdByName(town.getName());
+        return townService.addTown(town);
     }
 
     @GetMapping

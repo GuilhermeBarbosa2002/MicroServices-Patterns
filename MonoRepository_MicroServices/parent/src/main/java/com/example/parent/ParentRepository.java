@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface ParentRepository extends JpaRepository<Parent, Integer> {
 
-    Optional<Parent> findParentByEmail(String email);
+    Parent findParentByEmail(String email);
 
 }

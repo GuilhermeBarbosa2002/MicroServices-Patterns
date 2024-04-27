@@ -6,6 +6,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface TownRepository extends JpaRepository<Town, Integer > {
-    Optional<Town> findTownByName(String name);
+    Town findTownByName(String name);
 
 }

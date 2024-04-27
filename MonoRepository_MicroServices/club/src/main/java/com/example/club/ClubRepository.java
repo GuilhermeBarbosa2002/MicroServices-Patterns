@@ -6,4 +6,5 @@ public interface ClubRepository extends JpaRepository<Club, Integer> {
 
     Club findClubByName(String name);
 
+
 }

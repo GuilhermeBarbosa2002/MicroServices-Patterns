@@ -18,8 +18,14 @@ public class ParentService {
     private final ParentRepository parentRepository;
     private final StudentClient client; //TEM DE SER FINAL SENÃO NÃO DA
     private final TownClient townClient;
-    public void addParent(Parent parent){
-        parentRepository.save(parent);
+    public Integer addParent(Parent parent) {
+        if(parentRepository.findParentByEmail((parent.getEmail())) == null){
+            parentRepository.save(parent);
+            return parentRepository.findParentByEmail(parent.getEmail()).getId();
+        }else {
+            return parentRepository.findParentByEmail(parent.getEmail()).getId();
+        }
+
     }
 
     public List<Parent> getParents(){
@@ -27,8 +33,8 @@ public class ParentService {
     }
 
     public Integer getIdByEmail(String email){
-        Optional<Parent> parent = parentRepository.findParentByEmail(email);
-        return parent.get().getId();
+        Parent parent = parentRepository.findParentByEmail(email);
+        return parent.getId();
     }
 
     public FullParentResponse getParentsWithStudents(Integer parentId) {
