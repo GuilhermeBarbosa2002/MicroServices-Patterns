@@ -1,11 +1,13 @@
 package com.example.student;
 
+import com.example.student.Client.ClubClient;
 import com.example.student.Client.ParentClient;
 import com.example.student.Client.TownClient;
 import com.example.student.DTO.StudentFullResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,6 +18,7 @@ public class StudentService {
     private final StudentRepository studentRepository;
     private final ParentClient parentClient;
     private final TownClient townClient;
+    private final ClubClient clubClient;
     public void addStudent(Student student){
         studentRepository.save(student);
     }
@@ -36,13 +39,28 @@ public class StudentService {
         var student = studentRepository.findById(studentId).orElse(Student.builder().name("NOT_FOUND").email("NOT_FOUND").build());
         var parent = parentClient.getParentById(student.getParent()); // passamos o parent id e vamos buscar o parent todo
         var town = townClient.getTownById(student.getTown());
+        var club = clubClient.getClubById(student.getClub());
         return StudentFullResponse.builder()
                 .name(student.getName())
                 .email(student.getEmail())
                 .parent(parent)
-                .town(town).
+                .town(town)
+                .club(club).
                 build();
 
 
+    }
+
+    public List<Student> getAllStudentsByClub(Integer clubId) {
+
+        List<Student> students = new ArrayList<>();
+
+        for (Student s : studentRepository.findAll()){
+            if(s.getClub() == clubId){
+                students.add(s);
+            }
+        }
+
+        return students;
     }
 }

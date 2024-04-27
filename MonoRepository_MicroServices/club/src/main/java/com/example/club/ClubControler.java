@@ -26,7 +26,7 @@ public class ClubControler {
     }
 
     @GetMapping("{club-id}")
-    public ResponseEntity<ClubFullResponse> getClub(@PathVariable("club-id") Integer club){
+    public ResponseEntity<ClubFullResponse> getClubById(@PathVariable("club-id") Integer club){
         return ResponseEntity.ok(clubService.getFullResponseClub(club));
 
     }

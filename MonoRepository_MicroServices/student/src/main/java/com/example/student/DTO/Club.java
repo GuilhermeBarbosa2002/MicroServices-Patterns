@@ -1,5 +1,6 @@
 package com.example.student.DTO;
 
+import com.example.student.DTO.Town;
 import lombok.*;
 
 @Getter
@@ -7,10 +8,11 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class StudentFullResponse {
+public class Club {
+
+
     private String name;
-    private String email;
-    private Parent parent;
+    private String description;
     private Town town;
-    private Club club;
+
 }

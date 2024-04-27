@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="parent" />
+        <module name="teacher" />
         <module name="town" />
         <module name="student" />
         <module name="discovery" />
@@ -23,7 +24,6 @@
       <module name="apiExterna" target="21" />
       <module name="student (1)" target="21" />
       <module name="student (2)" target="21" />
-      <module name="teacher" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

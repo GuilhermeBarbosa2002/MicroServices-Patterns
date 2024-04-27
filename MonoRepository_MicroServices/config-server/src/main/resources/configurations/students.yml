@@ -24,6 +24,7 @@ application:
   config:
     parents-url: http://localhost:8070/api/v1/parents
     towns-url: http://localhost:8060/api/v1/towns
+    clubs-url: http://localhost:8020/api/v1/clubs
 
 management:
   tracing:
