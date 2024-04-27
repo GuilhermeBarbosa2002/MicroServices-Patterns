@@ -19,5 +19,5 @@ public interface StudentClient {
     void addStudent(@RequestBody StudentDTO studentDTO);
 
     @GetMapping("/clubs/{club-id}")
-    List<Student> getStudentsByClubId(@PathVariable("club-id") Integer clubId);
+    List<StudentDTO> getStudentsByClubId(@PathVariable("club-id") Integer clubId);
 }

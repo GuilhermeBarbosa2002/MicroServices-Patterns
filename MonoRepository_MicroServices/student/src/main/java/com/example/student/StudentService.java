@@ -52,15 +52,6 @@ public class StudentService {
     }
 
     public List<Student> getAllStudentsByClub(Integer clubId) {
-
-        List<Student> students = new ArrayList<>();
-
-        for (Student s : studentRepository.findAll()){
-            if(s.getClub() == clubId){
-                students.add(s);
-            }
-        }
-
-        return students;
+        return studentRepository.findAllByClub(clubId);
     }
 }

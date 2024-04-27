@@ -7,11 +7,11 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Club {
+public class Club{
 
-    private Integer id;
     private String description;
     private String name;
-    private Integer town;
+    private Integer people;
+    private Town town;
 
 }

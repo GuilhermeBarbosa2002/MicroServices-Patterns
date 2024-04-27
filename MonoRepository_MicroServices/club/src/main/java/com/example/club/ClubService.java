@@ -19,9 +19,10 @@ public class ClubService {
         return clubRepository.findAll();
     }
 
-    public void addClub(Club club) {
+    public Integer addClub(Club club) {
         clubRepository.save(club);
 
+        return clubRepository.findClubByName(club.getName()).getId();
     }
 
 

@@ -16,8 +16,8 @@ public class ClubControler {
     private final ClubService clubService;
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void addStudent(@RequestBody Club club){
-        clubService.addClub(club);
+    public Integer addClub(@RequestBody Club club){
+        return clubService.addClub(club);
     }
 
     @GetMapping

@@ -1,10 +1,7 @@
 package com.example.apiExterna;
 
 
-import com.example.apiExterna.DTO.Club;
-import com.example.apiExterna.DTO.Parent;
-import com.example.apiExterna.DTO.Student;
-import com.example.apiExterna.DTO.Town;
+import com.example.apiExterna.DTO.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,10 +33,11 @@ public class ApiExternaController {
         apiExternaService.addStudent(student);
     }
 
-    @GetMapping("/clubs/1000")
-    public List<Student> getStudentsWithClub1000(){
-        return apiExternaService.getStudentsWithClub1000();
+    @GetMapping("/clubs/{number-people}")
+    public List<StudentDTO> getStudentsWithClub1000(@PathVariable("number-people") int numberPeople) {
+        return apiExternaService.getStudentsWithClub1000(numberPeople);
     }
+
 
 
 

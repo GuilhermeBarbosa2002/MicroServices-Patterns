@@ -7,7 +7,6 @@ import com.example.apiExterna.Client.StudentClient;
 import com.example.apiExterna.Client.TownClient;
 import com.example.apiExterna.DTO.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,20 +22,22 @@ public class ApiExternaService {
 
 
 
-    public List<Student> getStudentsWithClub1000() {
-        List<Club> clubs = clubClient.getAllClubs().getBody();
-        List<Club> clubsWith1000= new ArrayList<>();
-        List<Student> allStudents = new ArrayList<>();
+    public List<StudentDTO> getStudentsWithClub1000(Integer numberPeople) {
+        List<ClubDTO> clubs = clubClient.getAllClubs().getBody();
+        List<ClubDTO> clubsWith1000= new ArrayList<>();
+        List<StudentDTO> allStudents = new ArrayList<>();
 
-        for(Club club : clubs){
-            if(townClient.getTownById(club.getTown()).getPeople() > 1000){
-
+        for(ClubDTO club : clubs){
+            if(townClient.getTownById(club.getTown()).getPeople() >= numberPeople){
                 clubsWith1000.add(club);
+                System.err.println("CLUB: " + club.getName());
             }
         }
 
-        for(Club club : clubsWith1000){
-            List<Student> studentsOfCurrentClub = studentClient.getStudentsByClubId(club.getId());
+        for(ClubDTO club : clubsWith1000){
+            List<StudentDTO> studentsOfCurrentClub = studentClient.getStudentsByClubId(club.getId());
+            System.out.println("STUDENT LENGTH - " + studentsOfCurrentClub.size());
+            System.out.println("STUDENT - " + studentsOfCurrentClub.get(0));
             allStudents.addAll(studentsOfCurrentClub);
         }
 
@@ -48,7 +49,7 @@ public class ApiExternaService {
 
     public Integer addTown(Town town) {
         Integer id = townClient.addTown(town);
-        System.err.println("-------------------------------- TOW:   " + id + "----------------------");
+
         return id;
     }
 
@@ -67,22 +68,39 @@ public class ApiExternaService {
                 build();
 
        Integer id = parentClient.addParent(parentDTO);
-       System.err.println("-------------------------------- PARENT:   " + id + "----------------------");
+
 
        return id;
+    }
+
+    private Integer addClub(Club club) {
+        Integer townId = addTown(club.getTown()); // get the town id
+        ClubDTO clubDTO = ClubDTO.builder()
+                .name(club.getName())
+                .description(club.getDescription())
+                .town(townId)
+                .build();
+        Integer id = clubClient.addClub(clubDTO);
+
+        return id;
+
     }
 
     public Integer addStudent(Student student) {
         Integer townId = addTown(student.getTown()); //get the town Id
         Integer parentId = addParent(student.getParent()); // get the parent Id
+        Integer clubId = addClub(student.getClub());
         StudentDTO studentDTO = StudentDTO.builder().
                 name(student.getName()).
                 email(student.getEmail()).
                 town(townId).
                 parent(parentId)
+                .club(clubId)
                 .build();
 
         studentClient.addStudent(studentDTO);
         return 0;
     }
+
+
 }
