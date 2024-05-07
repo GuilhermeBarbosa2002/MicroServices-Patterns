@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="parent" />
+        <module name="view" />
         <module name="teacher" />
         <module name="town" />
         <module name="student" />
@@ -40,8 +41,9 @@
       <module name="student" options="-parameters" />
       <module name="student (1)" options="-parameters" />
       <module name="student (2)" options="-parameters" />
-      <module name="teacher" options="" />
+      <module name="teacher" options="-parameters" />
       <module name="town" options="-parameters" />
+      <module name="view" options="-parameters" />
     </option>
   </component>
 </project>

@@ -40,4 +40,8 @@ public class ClubService {
                 build();
 
     }
+
+    public void deleteClubById(Integer clubId) {
+        clubRepository.deleteById(clubId);
+    }
 }

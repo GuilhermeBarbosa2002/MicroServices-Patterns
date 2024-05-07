@@ -16,5 +16,6 @@ public interface ParentClient {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     Integer addParent(@RequestBody ParentDTO parent);
-
+    @DeleteMapping("/{student-id}")
+    void deleteById(@PathVariable("student-id") Integer studentId);
 }

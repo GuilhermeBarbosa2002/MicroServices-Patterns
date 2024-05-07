@@ -20,4 +20,6 @@ public interface StudentClient {
 
     @GetMapping("/clubs/{club-id}")
     List<StudentDTO> getStudentsByClubId(@PathVariable("club-id") Integer clubId);
+
+
 }

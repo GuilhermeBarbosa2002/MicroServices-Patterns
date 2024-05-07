@@ -39,6 +39,11 @@ public class StudentController {
      return studentService.getAllStudentsByClub(clubId);
     }
 
+    @DeleteMapping("/{student-id}")
+    public void deleteById(@PathVariable("student-id") Integer studentId){
+        studentService.deleteStudentById(studentId);
+    }
+
 
 
 }

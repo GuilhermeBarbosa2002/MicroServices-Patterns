@@ -30,4 +30,9 @@ public class TownController {
 
     }
 
+    @DeleteMapping("/{town-id}")
+    public void deleteById(@PathVariable("town-id") Integer townId){
+        townService.deleteTownById(townId);
+    }
+
 }

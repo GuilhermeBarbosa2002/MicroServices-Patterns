@@ -62,4 +62,8 @@ public class ParentService {
         return parent;
 
     }
+
+    public void deleteParentById(Integer parentId) {
+        parentRepository.deleteById(parentId);
+    }
 }

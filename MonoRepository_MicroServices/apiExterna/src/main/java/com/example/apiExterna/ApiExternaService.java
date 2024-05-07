@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ApiExternaService {
+public class ApiExternaService  {
     private final TownClient townClient;
     private final ParentClient parentClient;
     private final StudentClient studentClient;
@@ -48,40 +48,56 @@ public class ApiExternaService {
     }
 
     public Integer addTown(Town town) {
-        Integer id = townClient.addTown(town);
-
+        Integer id;
+        try{
+            id = townClient.addTown(town);
+        }catch (Exception exception){
+            id = 0;
+        }
         return id;
     }
 
     public Integer addParent(Parent parent) {
-        Integer townId = addTown(parent.getTown()); // get the town id
-        ParentDTO parentDTO = ParentDTO.builder().
-                firstName(parent.getFirstName()).
-                phoneNumber(parent.getPhoneNumber()).
-                email(parent.getEmail()).
-                middleName(parent.getMiddleName()).
-                EGN(parent.getEGN()).
-                gender(parent.getGender()).
-                lastName(parent.getLastName()).
-                age(parent.getAge()).
-                town(townId).
-                build();
-
-       Integer id = parentClient.addParent(parentDTO);
-
-
+        Integer townId = addTown(parent.getTown());
+        Integer id = 0;
+        if(townId!=0){
+            try {
+                ParentDTO parentDTO = ParentDTO.builder().
+                        firstName(parent.getFirstName()).
+                        phoneNumber(parent.getPhoneNumber()).
+                        email(parent.getEmail()).
+                        middleName(parent.getMiddleName()).
+                        EGN(parent.getEGN()).
+                        gender(parent.getGender()).
+                        lastName(parent.getLastName()).
+                        age(parent.getAge()).
+                        town(townId).
+                        build();
+                        id = parentClient.addParent(parentDTO);
+            } catch (Exception e){
+                townClient.deleteById(townId);
+                id = 0;
+            }
+        }
        return id;
     }
 
     private Integer addClub(Club club) {
-        Integer townId = addTown(club.getTown()); // get the town id
-        ClubDTO clubDTO = ClubDTO.builder()
-                .name(club.getName())
-                .description(club.getDescription())
-                .town(townId)
-                .build();
-        Integer id = clubClient.addClub(clubDTO);
-
+        Integer townId = addTown(club.getTown());
+        Integer id = 0;
+        if(townId!=0 ) {
+            try {
+                ClubDTO clubDTO = ClubDTO.builder()
+                        .name(club.getName())
+                        .description(club.getDescription())
+                        .town(townId)
+                        .build();
+                id = clubClient.addClub(clubDTO);
+            }catch (Exception e){
+                townClient.deleteById(townId);
+                id =0;
+            }
+        }
         return id;
 
     }
@@ -90,17 +106,26 @@ public class ApiExternaService {
         Integer townId = addTown(student.getTown()); //get the town Id
         Integer parentId = addParent(student.getParent()); // get the parent Id
         Integer clubId = addClub(student.getClub());
-        StudentDTO studentDTO = StudentDTO.builder().
-                name(student.getName()).
-                email(student.getEmail()).
-                town(townId).
-                parent(parentId)
-                .club(clubId)
-                .build();
 
-        studentClient.addStudent(studentDTO);
+        if (townId != 0 && parentId != 0 && clubId != 0) {
+            try{
+                StudentDTO studentDTO = StudentDTO.builder().
+                        name(student.getName()).
+                        email(student.getEmail()).
+                        town(townId).
+                        parent(parentId)
+                        .club(clubId)
+                        .build();
+
+                studentClient.addStudent(studentDTO);
+            }catch (Exception e){
+                townClient.deleteById(townId);
+                parentClient.deleteById(parentId);
+                clubClient.deleteById(clubId);
+            }
+
+        }
         return 0;
     }
-
 
 }

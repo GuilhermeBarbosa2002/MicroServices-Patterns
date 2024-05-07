@@ -37,10 +37,7 @@ public class TownService {
             return parent;
          }
 
-        public void removeTown(Integer id){
+        public void deleteTownById(Integer id) {
             townRepository.deleteById(id);
         }
-
-
-
 }

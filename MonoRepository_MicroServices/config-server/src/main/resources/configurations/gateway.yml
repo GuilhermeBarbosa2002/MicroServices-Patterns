@@ -41,6 +41,10 @@ spring:
           predicates:
             - Path=/api/v1/apiexterna/**
           uri: http://localhost:8010
+        - id: view
+          predicates:
+            - Path=/api/v1/view/**
+          uri: http://localhost:8000
 
 management:
   tracing:

@@ -36,4 +36,9 @@ public class ParentController {
     public ResponseEntity<FullParentResponse> getAllParents(@PathVariable("parent-id") Integer parentId){
         return ResponseEntity.ok(parentService.getParentsWithStudents(parentId));
     }
+
+    @DeleteMapping("/{parent-id}")
+    public void deleteById(@PathVariable("parent-id") Integer parentId){
+        parentService.deleteParentById(parentId);
+    }
 }

@@ -15,6 +15,9 @@ public interface TownClient {
     @ResponseStatus(HttpStatus.CREATED)
     Integer addTown(@RequestBody Town town);
 
+    @DeleteMapping("/{town-id}")
+    void deleteById(@PathVariable("town-id") Integer townId);
+
 
 
 

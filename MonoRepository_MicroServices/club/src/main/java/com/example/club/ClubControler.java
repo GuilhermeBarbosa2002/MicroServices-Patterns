@@ -30,7 +30,10 @@ public class ClubControler {
         return ResponseEntity.ok(clubService.getFullResponseClub(club));
 
     }
-
+    @DeleteMapping("/{club-id}")
+    public void deleteById(@PathVariable("club-id") Integer clubId){
+        clubService.deleteClubById(clubId);
+    }
 
 
 }

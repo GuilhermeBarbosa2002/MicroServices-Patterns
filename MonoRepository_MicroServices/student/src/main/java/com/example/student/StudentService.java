@@ -3,7 +3,11 @@ package com.example.student;
 import com.example.student.Client.ClubClient;
 import com.example.student.Client.ParentClient;
 import com.example.student.Client.TownClient;
+import com.example.student.Client.ViewClient;
+import com.example.student.DTO.Club;
+import com.example.student.DTO.StudentDTO;
 import com.example.student.DTO.StudentFullResponse;
+import com.example.student.DTO.Town;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +23,16 @@ public class StudentService {
     private final ParentClient parentClient;
     private final TownClient townClient;
     private final ClubClient clubClient;
+    private final ViewClient viewClient;
     public void addStudent(Student student){
+        //get the club of Student
+        Club club = clubClient.getClubById(student.getClub());
+        Town town = club.getTown();
+
+        if(town.getPeople() >= 1000){
+           StudentDTO studentDTO = new StudentDTO(student.getName(),student.getEmail());
+           viewClient.addStudent(studentDTO);
+        }
         studentRepository.save(student);
     }
 
@@ -53,5 +66,9 @@ public class StudentService {
 
     public List<Student> getAllStudentsByClub(Integer clubId) {
         return studentRepository.findAllByClub(clubId);
+    }
+
+    public void deleteStudentById(Integer studentId) {
+        studentRepository.deleteById(studentId);
     }
 }
