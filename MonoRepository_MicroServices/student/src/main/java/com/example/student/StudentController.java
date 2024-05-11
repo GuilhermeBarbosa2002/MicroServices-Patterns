@@ -2,6 +2,7 @@ package com.example.student;
 
 import com.example.student.DTO.StudentFullResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class StudentController {
     private final StudentService studentService;
+    @SneakyThrows
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void addStudent(@RequestBody Student student){

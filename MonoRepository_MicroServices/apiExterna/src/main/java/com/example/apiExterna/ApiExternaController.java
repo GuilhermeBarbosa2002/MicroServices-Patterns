@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.naming.NotContextException;
 import java.util.List;
 
 @RequestMapping("/api/v1/apiexterna")
@@ -34,8 +35,12 @@ public class ApiExternaController {
     }
 
     @GetMapping("/clubs/{number-people}")
-    public List<StudentDTO> getStudentsWithClub1000(@PathVariable("number-people") int numberPeople) {
-        return apiExternaService.getStudentsWithClub1000(numberPeople);
+    public ResponseEntity<List<StudentDTO>> getStudentsWithClub1000(@PathVariable("number-people") int numberPeople) throws NotContextException {
+        try {
+            return ResponseEntity.ok(apiExternaService.getStudentsWithClub1000(numberPeople));
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        }
     }
 
 

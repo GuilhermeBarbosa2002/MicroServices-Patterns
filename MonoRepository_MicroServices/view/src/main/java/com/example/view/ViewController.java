@@ -21,7 +21,7 @@ public class ViewController {
 
     @GetMapping
     public ResponseEntity<List<Student>> getAllStudents(){
-        return ResponseEntity.ok(viewService.getStudents());
+            return ResponseEntity.ok(viewService.getStudents());
     }
 
 }

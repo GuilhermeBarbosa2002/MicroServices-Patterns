@@ -8,6 +8,9 @@ import com.example.student.DTO.Club;
 import com.example.student.DTO.StudentDTO;
 import com.example.student.DTO.StudentFullResponse;
 import com.example.student.DTO.Town;
+import com.example.student.Kafka.KafkaProducer;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +19,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-
 public class StudentService {
 
     private final StudentRepository studentRepository;
@@ -24,14 +26,20 @@ public class StudentService {
     private final TownClient townClient;
     private final ClubClient clubClient;
     private final ViewClient viewClient;
-    public void addStudent(Student student){
+    private final KafkaProducer kafkaProducer;
+    private final ObjectMapper objectMapper;
+
+    public void addStudent(Student student) throws JsonProcessingException {
         //get the club of Student
         Club club = clubClient.getClubById(student.getClub());
         Town town = club.getTown();
 
         if(town.getPeople() >= 1000){
            StudentDTO studentDTO = new StudentDTO(student.getName(),student.getEmail());
-           viewClient.addStudent(studentDTO);
+           // viewClient.addStudent(studentDTO); antes do kafka estavamos a usar o viewClient para adicionar o student
+           String student_json = objectMapper.writeValueAsString(studentDTO);
+           System.err.println(student_json);
+           kafkaProducer.sendMessage(student_json);
         }
         studentRepository.save(student);
     }

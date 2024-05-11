@@ -9,6 +9,7 @@ import com.example.apiExterna.DTO.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.naming.NotContextException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class ApiExternaService  {
 
 
 
-    public List<StudentDTO> getStudentsWithClub1000(Integer numberPeople) {
+    public List<StudentDTO> getStudentsWithClub1000(Integer numberPeople) throws NotContextException {
         List<ClubDTO> clubs = clubClient.getAllClubs().getBody();
         List<ClubDTO> clubsWith1000= new ArrayList<>();
         List<StudentDTO> allStudents = new ArrayList<>();
@@ -35,17 +36,21 @@ public class ApiExternaService  {
         }
 
         for(ClubDTO club : clubsWith1000){
-            List<StudentDTO> studentsOfCurrentClub = studentClient.getStudentsByClubId(club.getId());
-            System.out.println("STUDENT LENGTH - " + studentsOfCurrentClub.size());
-            System.out.println("STUDENT - " + studentsOfCurrentClub.get(0));
-            allStudents.addAll(studentsOfCurrentClub);
+            try {
+                List<StudentDTO> studentsOfCurrentClub = studentClient.getStudentsByClubId(club.getId());
+                System.out.println("STUDENT LENGTH - " + studentsOfCurrentClub.size());
+                System.out.println("STUDENT - " + studentsOfCurrentClub.get(0));
+                allStudents.addAll(studentsOfCurrentClub);
+
+            } catch(Exception e){
+                throw new NotContextException("Não existem estudantes que não pertencem a um clube com mais de " + numberPeople + " pessoas");
+            }
         }
 
         return allStudents;
-
-
-
     }
+
+
 
     public Integer addTown(Town town) {
         Integer id;
