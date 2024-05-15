@@ -16,6 +16,6 @@ public class KafkaProducer {
     public void sendMessage(String message) {
         kafkaTemplate.send(TOPIC_NAME, message);
         System.out.println("Message " + message +
-                " has been sucessfully sent to the topic: " + TOPIC_NAME);
+                " has been successfully sent to the topic: " + TOPIC_NAME);
     }
 }

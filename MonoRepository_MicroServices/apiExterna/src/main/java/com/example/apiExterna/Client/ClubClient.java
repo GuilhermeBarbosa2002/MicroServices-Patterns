@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@FeignClient(name = "club-service", url = "${application.config.clubs-url}")
+@FeignClient(name = "CLUBS", path = "/api/v1/clubs")
 public interface ClubClient {
 
     @GetMapping

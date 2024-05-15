@@ -58,6 +58,7 @@ public class ApiExternaService  {
             id = townClient.addTown(town);
         }catch (Exception exception){
             id = 0;
+            System.out.println("Error: " + exception.getMessage());
         }
         return id;
     }
@@ -82,6 +83,7 @@ public class ApiExternaService  {
             } catch (Exception e){
                 townClient.deleteById(townId);
                 id = 0;
+                System.out.println("Error: " + e.getMessage());
             }
         }
        return id;
@@ -101,6 +103,7 @@ public class ApiExternaService  {
             }catch (Exception e){
                 townClient.deleteById(townId);
                 id =0;
+                System.out.println("Error: " + e.getMessage());
             }
         }
         return id;
@@ -108,9 +111,13 @@ public class ApiExternaService  {
     }
 
     public Integer addStudent(Student student) {
+        System.out.println("Adding student...");
         Integer townId = addTown(student.getTown()); //get the town Id
+        System.out.println("Town ID: " + townId);
         Integer parentId = addParent(student.getParent()); // get the parent Id
+        System.out.println("Parent ID: " + parentId);
         Integer clubId = addClub(student.getClub());
+        System.out.println("Club ID: " + clubId);
 
         if (townId != 0 && parentId != 0 && clubId != 0) {
             try{
@@ -127,6 +134,7 @@ public class ApiExternaService  {
                 townClient.deleteById(townId);
                 parentClient.deleteById(parentId);
                 clubClient.deleteById(clubId);
+                System.out.printf("Error: %s", e.getMessage());
             }
 
         }

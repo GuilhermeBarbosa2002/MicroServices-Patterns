@@ -1,11 +1,11 @@
 server:
   port: 8030
 eureka:
-  instance:
-    hostname: localhost
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
 spring:
   application:
     name: teachers
@@ -19,13 +19,11 @@ spring:
       ddl-auto: create
     database: mysql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-
 application:
   config:
-    parents-url: http://localhost:8070/api/v1/parents
-    towns-url: http://localhost:8060/api/v1/towns
-    clubs-url: http://localhost:8020/api/v1/clubs
-
+    parents-url: http://parents/api/v1/parents
+    towns-url: http://towns/api/v1/towns
+    clubs-url: http://clubs/api/v1/clubs
 management:
   tracing:
     sampling:

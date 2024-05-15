@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "town-service", url = "${application.config.towns-url}")
+@FeignClient(name = "TOWNS", path = "/api/v1/towns")
 public interface TownClient {
     @GetMapping("/{town-id}")
     Town getTownById(@PathVariable("town-id") Integer townId);

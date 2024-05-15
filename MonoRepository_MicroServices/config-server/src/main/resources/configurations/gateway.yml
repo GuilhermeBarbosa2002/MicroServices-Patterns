@@ -1,50 +1,59 @@
 server:
   port: 8222
+
 eureka:
   client:
-    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+
 spring:
   application:
     name: gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: students
           predicates:
             - Path=/api/v1/students/**
-          uri: http://localhost:8090
+          uri: lb://students
         - id: parents
           predicates:
             - Path=/api/v1/parents/**
-          uri: http://localhost:8070
+          uri: lb://parents
         - id: towns
           predicates:
             - Path=/api/v1/towns/**
-          uri: http://localhost:8060
+          uri: lb://towns
         - id: employees
           predicates:
             - Path=/api/v1/employees/**
-          uri: http://localhost:8050
+          uri: lb://employees
         - id: marks
           predicates:
             - Path=/api/v1/marks/**
-          uri: http://localhost:8040
+          uri: lb://marks
         - id: teachers
           predicates:
             - Path=/api/v1/teachers/**
-          uri: http://localhost:8030
+          uri: lb://teachers
         - id: clubs
           predicates:
             - Path=/api/v1/clubs/**
-          uri: http://localhost:8020
+          uri: lb://clubs
         - id: apiexterna
           predicates:
             - Path=/api/v1/apiexterna/**
-          uri: http://localhost:8010
+          uri: lb://apiexterna
         - id: view
           predicates:
             - Path=/api/v1/view/**
-          uri: http://localhost:8000
+          uri: lb://view
 
 management:
   tracing:

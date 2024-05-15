@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "student-service", url = "${application.config.students-url}")
+@FeignClient(name = "students", path = "/api/v1/students")
 public interface StudentClient {
     @GetMapping("/parent/{parent-id}")
     List<Student> findAllStudentsByParent(@PathVariable("parent-id") Integer parentId);

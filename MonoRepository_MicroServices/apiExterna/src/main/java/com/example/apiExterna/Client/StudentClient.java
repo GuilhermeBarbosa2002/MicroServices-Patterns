@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "student-service", url = "${application.config.students-url}")
+@FeignClient(name = "STUDENTS", path = "/api/v1/students")
 public interface StudentClient {
 
     @PostMapping

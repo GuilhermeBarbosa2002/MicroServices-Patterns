@@ -20,8 +20,10 @@ public class KafkaConsumer {
     @KafkaListener(topics = "students", groupId = "students")
     public void consumeMessage(String student_json) throws JsonProcessingException {
         //objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        student_json = student_json.replace("\\", ""); // Remover as barras invertidas
-        student_json = student_json.substring(1, student_json.length() - 1); // Remover as aspas externas
+        System.out.println(student_json);
+        /*student_json = student_json.replace("\\", ""); // Remover as barras invertidas
+        student_json = student_json.substring(1, student_json.length() - 1); // Remover as aspas externas*/
+        System.out.println(student_json);
         JsonNode jsonNodeRoot = objectMapper.readTree(student_json);
         JsonNode name = jsonNodeRoot.get("name");
         JsonNode email = jsonNodeRoot.get("email");
