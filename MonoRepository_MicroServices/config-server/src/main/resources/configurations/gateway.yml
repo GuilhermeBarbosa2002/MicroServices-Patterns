@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
   instance:
     prefer-ip-address: true
 
@@ -54,8 +54,3 @@ spring:
           predicates:
             - Path=/api/v1/view/**
           uri: lb://view
-
-management:
-  tracing:
-    sampling:
-      probability: 1.0

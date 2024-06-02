@@ -1,6 +1,5 @@
 package com.example.parent;
 
-import com.example.town.Town;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

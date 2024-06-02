@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-server
+  labels:
+    app: config-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config-server
+  template:
+    metadata:
+      labels:
+        app: config-server
+    spec:
+      containers:
+      - name: config-server
+        image: capitale48/config-server
+        imagePullPolicy: Always
+        env:
+        - name: KAFKA_ADDRESS
+          value: "crs-kafka-0.kafka.default.svc.cluster.local:29092"
+        ports:
+        - containerPort: 8888
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: config-server-svc
+spec:
+  selector:
+    app: config-server
+  ports:
+  - port: 80
+    targetPort: 8888

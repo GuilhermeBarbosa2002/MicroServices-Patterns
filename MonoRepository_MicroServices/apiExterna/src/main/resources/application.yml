@@ -2,4 +2,19 @@ spring:
   application:
     name: apiexterna
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://config-server-svc:80
+
+server:
+  port: 8010
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0

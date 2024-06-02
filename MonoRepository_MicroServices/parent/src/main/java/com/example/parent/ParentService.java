@@ -3,7 +3,6 @@ package com.example.parent;
 import com.example.parent.Client.StudentClient;
 import com.example.parent.Client.TownClient;
 import com.example.parent.DTO.FullParentResponse;
-import com.example.town.Town;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

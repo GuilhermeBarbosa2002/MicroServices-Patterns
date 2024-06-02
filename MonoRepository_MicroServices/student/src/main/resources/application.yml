@@ -1,5 +1,36 @@
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
+  instance:
+    prefer-ip-address: true
+
 spring:
+  cloud:
+    config:
+        enabled: false
   application:
     name: students
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DATABASE_ADDRESS}/students
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: mysql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    bootstrap-servers: ${KAFKA_ADDRESS}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+application:
   config:
-    import: optional:configserver:http://localhost:8888
+    parents-url: http://parents/api/v1/parents
+    towns-url: http://towns/api/v1/towns
+    clubs-url: http://clubs/api/v1/clubs
+    view-url: http://view/api/v1/view

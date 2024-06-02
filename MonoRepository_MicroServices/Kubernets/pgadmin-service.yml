@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgadmin-compose
+  labels:
+    app: pgadmin-compose
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pgadmin-compose
+  template:
+    metadata:
+      labels:
+        app: pgadmin-compose
+    spec:
+      containers:
+      - name: pgadmin-compose
+        image: dpage/pgadmin4
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 16543
+        env:
+        - name: PGADMIN_DEFAULT_EMAIL
+          value: "admin@admin.com"
+        - name: PGADMIN_DEFAULT_PASSWORD
+          value: "PgAdmin2019!"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgadmin-compose-svc
+spec:
+  selector:
+    app: pgadmin-compose
+  ports:
+  - port: 80
+    targetPort: 16543

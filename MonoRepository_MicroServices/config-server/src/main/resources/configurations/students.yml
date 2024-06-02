@@ -3,15 +3,16 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
   instance:
     prefer-ip-address: true
+
 spring:
   application:
     name: students
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/students
+    url: jdbc:postgresql://database-svc:80/students
     username: postgres
     password: postgres
   jpa:
@@ -20,7 +21,7 @@ spring:
     database: mysql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   kafka:
-    bootstrap-servers: localhost:29092
+    bootstrap-servers: kafka-0.kafka-cluster.default.svc.cluster.local:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -30,10 +31,3 @@ application:
     towns-url: http://towns/api/v1/towns
     clubs-url: http://clubs/api/v1/clubs
     view-url: http://view/api/v1/view
-
-
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-

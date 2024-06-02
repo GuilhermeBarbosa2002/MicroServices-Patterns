@@ -1,0 +1,105 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zookeeper-cluster
+spec:
+  selector:
+    app: zookeeper-cluster
+  ports:
+  - name: client
+    port: 2181
+    targetPort: 2181 
+  - name: follower
+    port: 2888
+    targetPort: 2888 
+  - name: leader
+    port: 3888
+    targetPort: 3888
+  clusterIP: None    
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-cluster
+spec:
+  selector:
+    app: kafka-cluster
+  ports:
+  - port: 9092
+    targetPort: 9092
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: crs-zookeeper
+spec:
+  replicas: 3
+  serviceName: zookeeper-cluster
+  selector:
+    matchLabels:
+      app: zookeeper-cluster
+  template:
+    metadata:
+      labels:
+        component: zookeeper-cluster
+        app: zookeeper-cluster
+    spec:
+      containers:
+      - name: zookeeper
+        image: bitnami/zookeeper:latest
+        securityContext:
+          runAsUser: 0 
+        ports:
+        - containerPort: 2181
+        - containerPort: 2888
+        - containerPort: 3888
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - "sh"
+                - "-c"
+                - >
+                  echo $(( $(cat /etc/hosts | grep zookeeper | awk '{print($3)}' | awk '{split($0,array,"-")} END{print array[3]}') + 1 )) > /bitnami/zookeeper/data/myid
+        env:
+        - name: ALLOW_ANONYMOUS_LOGIN
+          value: "yes"
+        - name: ZOO_SERVERS
+          value:  crs-zookeeper-0.zookeeper-cluster.default.svc.cluster.local:2888:3888,crs-zookeeper-1.zookeeper-cluster.default.svc.cluster.local:2888:3888,crs-zookeeper-2.zookeeper-cluster.default.svc.cluster.local:2888:3888
+---
+apiVersion: apps/v1
+kind: StatefulSet
+#kind: Deployment
+metadata:
+  name: crs-kafka
+spec:
+  replicas: 3
+  serviceName: kafka-cluster
+  selector:
+    matchLabels:
+        app: kafka-cluster
+  template:
+    metadata:
+      labels:
+        app: kafka-cluster
+    spec:
+      hostname: kafka
+      containers:
+      - name: kafka
+        image: bitnami/kafka:2.6.0  
+#        image: bitnami/kafka:latest
+        securityContext:
+          runAsUser: 0
+        resources:
+          requests:
+            memory: "1G"
+            cpu: "1"             
+        ports:
+         - containerPort: 9092
+        env:
+        - name: KAFKA_CFG_ZOOKEEPER_CONNECT
+          value: crs-zookeeper-0.zookeeper-cluster.default.svc.cluster.local:2181,crs-zookeeper-1.zookeeper-cluster.default.svc.cluster.local:2181,crs-zookeeper-2.zookeeper-cluster.default.svc.cluster.local:2181
+#          value: zookeeper-cluster:2181
+        - name: ALLOW_PLAINTEXT_LISTENER
+          value: "yes" 

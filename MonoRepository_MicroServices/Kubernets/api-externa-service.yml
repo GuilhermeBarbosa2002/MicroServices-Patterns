@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-externa
+  labels:
+    app: api-externa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-externa
+  template:
+    metadata:
+      labels:
+        app: api-externa
+    spec:
+      containers:
+      - name: api-externa
+        image: capitale48/api-externa
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8010
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-externa-svc
+spec:
+  selector:
+    app: api-externa
+  ports:
+  - port: 80
+    targetPort: 8010

@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
   instance:
     prefer-ip-address: true
 spring:
@@ -11,7 +11,7 @@ spring:
     name: teachers
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/teachers
+    url: jdbc:postgresql://database-svc:80/teachers
     username: postgres
     password: postgres
   jpa:
@@ -24,7 +24,3 @@ application:
     parents-url: http://parents/api/v1/parents
     towns-url: http://towns/api/v1/towns
     clubs-url: http://clubs/api/v1/clubs
-management:
-  tracing:
-    sampling:
-      probability: 1.0

@@ -2,6 +2,8 @@ version: '3.8'
 
 name: postgres
 
+
+
 services:
   db-postgres:
     container_name: database
@@ -13,33 +15,37 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./postgres/data:/var/lib/postgresql/data
-      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - /postgres/data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - services
+
   pgadmin-compose:
+    container_name: pgadmin-compose
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
       PGADMIN_DEFAULT_PASSWORD: "PgAdmin2019!"
     ports:
       - "16543:80"
+    networks:
+      - services
     depends_on:
       - db-postgres
 
-  zipkin:
-    container_name: zipkin
-    image: openzipkin/zipkin
-    ports:
-      - "9411:9411"
-
   zookeeper:
+    container_name: zookeeper
     image: confluentinc/cp-zookeeper:7.4.4
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - 22181:2181
+    networks:
+      - services
 
   kafka:
+    container_name: kafka
     image: confluentinc/cp-kafka:7.4.4
     depends_on:
       - zookeeper
@@ -48,11 +54,157 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:9092,PLAINTEXT_HOST://127.0.0.1:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - services
+
+  config-server:
+    container_name: config-server
+    image: capitale48/config-server
+    build: ./config-server
+    ports:
+      - "8888:8888"
+    networks:
+      - services
+
+  discovery:
+    container_name: discovery
+    image: capitale48/service_discovery
+    build: ./discovery
+    depends_on:
+      - config-server
+    ports:
+      - "8761:8761"
+    networks:
+      - services
+
+  student:
+    container_name: student
+    image: capitale48/student-service
+    build: ./student
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8090:8090"
+    networks:
+      - services
+
+  apiexterna:
+    container_name: apiexterna
+    image: capitale48/api-externa
+    build: ./apiExterna
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8010:8010"
+    networks:
+      - services
+
+  clubs:
+    container_name: clubs
+    image: capitale48/clubs-service
+    build: ./club
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8020:8020"
+    networks:
+      - services
+
+  employees:
+    container_name: employees
+    image: capitale48/employees-service
+    build: ./employee
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8050:8050"
+    networks:
+      - services
+
+  gateway:
+    container_name: gateway
+    image: capitale48/gateway-service
+    build: ./gateway
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8222:8222"
+    networks:
+      - services
+
+  marks:
+    container_name: marks
+    image: capitale48/marks-service
+    build: ./mark
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8040:8040"
+    networks:
+      - services
+
+  parents:
+    container_name: parents
+    image: capitale48/parents-service
+    build: ./parent
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8070:8070"
+    networks:
+      - services
+
+  teachers:
+    container_name: teachers
+    image: capitale48/teachers-service
+    build: ./teacher
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8030:8030"
+    networks:
+      - services
+
+  towns:
+    container_name: towns
+    image: capitale48/towns-service
+    build: ./town
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8060:8060"
+    networks:
+      - services
+
+  view:
+    container_name: view
+    image: capitale48/view-service
+    build: ./view
+    depends_on:
+      - config-server
+      - discovery
+    ports:
+      - "8000:8000"
+    networks:
+      - services
 
 volumes:
   db:
     driver: local
+
+networks:
+  services:
+    driver: bridge

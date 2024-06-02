@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marks
+  labels:
+    app: marks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: marks
+  template:
+    metadata:
+      labels:
+        app: marks
+    spec:
+      containers:
+      - name: marks
+        image: capitale48/marks-service
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8040
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: marks-svc
+spec:
+  selector:
+    app: marks
+  ports:
+  - port: 80
+    targetPort: 8040

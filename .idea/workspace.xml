@@ -1,230 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ef3b87de-faa0-49f5-aac4-23b3063da093" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOCUMENTATION.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/java/com/example/configserver/ConfigServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/discovery.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/employees.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/gateway.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/marks.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/parents.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/students.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/towns.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/test/java/com/example/configserver/ConfigServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/src/main/java/com/example/discovery/DiscoveryApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/src/test/java/com/example/discovery/DiscoveryApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Client/TownClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/DTO/Town.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Department/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Department/DepartmentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Department/DepartmentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Department/DepartmentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/EmployeeApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/EmployeeControler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/EmployeeFullResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/EmployeeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/EmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/test/java/com/example/town/TownApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/src/main/java/com/example/gateway/GatewayApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/src/test/java/com/example/gateway/GatewayApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/src/main/java/com/example/mark/MarkApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/src/test/java/com/example/mark/StudentApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/Client/StudentClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/Client/TownClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/DTO/FullParentResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/DTO/ParentFull.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/DTO/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/DTO/Town.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/Parent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentService.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/apiExterna/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/club/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/student/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/teacher/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/town/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/view/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/apiExterna/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/apiExterna/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/apiExterna/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/apiExterna/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/club/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/club/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/club/src/main/java/com/example/club/Client/TownClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/club/src/main/java/com/example/club/Client/TownClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/club/src/main/java/com/example/club/ClubApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/club/src/main/java/com/example/club/ClubApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/club/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/club/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/apiexterna.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/apiexterna.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/clubs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/clubs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/discovery.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/discovery.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/employees.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/employees.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/marks.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/marks.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/parents.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/parents.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/students.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/students.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/teachers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/teachers.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/towns.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/towns.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/view.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/src/main/resources/configurations/view.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Client/TownClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/java/com/example/employee/Client/TownClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/employee/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/mark/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/parent/ParentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/town/Town.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/town/TownApplication.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/town/TownController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/town/TownRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/java/com/example/town/TownService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/test/java/com/example/parent/ParentApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/test/java/com/example/town/TownApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/Client/ParentClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/Client/TownClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/DTO/Parent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/DTO/StudentFullResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/DTO/Town.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/StudentApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/java/com/example/student/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/test/java/com/example/student/StudentApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/java/com/example/town/Town.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/java/com/example/town/TownApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/java/com/example/town/TownController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/java/com/example/town/TownRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/java/com/example/town/TownService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/test/java/com/example/town/TownApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL-Docker/config/prometheus.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL-Docker/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/IStudentApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/config/ApplicationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/ClubDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/CountryDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/DepartmentDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/EmployeeDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/MarkDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/ParentDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/RoleDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/StudentDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/SubjectDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/TeacherDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/TownDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/UserRegisterDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/DTOs/base/PersonEntityDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Club.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Country.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Mark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Parent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Subject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Teacher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/Town.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/base/BaseEntityWithIdLong.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/base/BasePersonEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/enums/Gender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/enums/GenderEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/enums/Mark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/enums/MarkEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/users/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/users/RolesEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/entity/users/UserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/DepartmentValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/FieldMatch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/FieldMatchValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/PhoneNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/PhoneNumberValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/UniqueClubName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/UniqueClubNameValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/UsedEmail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/UsedEmailValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/ValidDepartment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/ValidEGN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/ValidEGNValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/ValidGender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/ValidGenderValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/ValidTown.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/model/validation/ValidTownValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/ClubRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/DepartmentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/EmployeeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/MarkRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/ParentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/RoleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/SubjectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/TeacherRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/TownRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/AppUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/ClubService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/DepartmentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/EmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/ParentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/SubjectService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/TeacherService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/TownService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/web/ClubController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/web/EmployeeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/web/ParentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/web/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/web/TeacherController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/java/com/iStudent/web/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/resources/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web App/src/test/java/com/iStudent/IStudentApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/parent/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/postgres/data/postmaster.pid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/student/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/student/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/teacher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/teacher/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/teacher/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/teacher/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/town/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/town/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/view/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/view/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoRepository_MicroServices/view/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MonoRepository_MicroServices/view/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,28 +78,178 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2fN1w6hjiGA7P23AiRvYhNuv8x6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/OneDrive - Universidade do Minho/Ambiente de Trabalho/Gonçalo/Universidade/4º Ano MEGSI/2º Semestre/Arquitetura/MicroServices-Patterns/MonoRepository_MicroServices",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.apiexterna [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.apiexterna [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.club [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.club [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.config-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.config-server [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.config-server [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.employee [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.employee [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mark [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mark [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.parent [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.parent [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.student [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.student [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.student [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.teacher [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.teacher [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.town [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.town [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.view [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.view [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Neon/Documents/Universidade/4º Ano/ASID/MicroServices-Patterns/MonoRepository_MicroServices/config-server/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Neon\Documents\Universidade\4º Ano\ASID\MicroServices-Patterns\MonoRepository_MicroServices\view" />
+      <recent name="C:\Users\Neon\Documents\Universidade\4º Ano\ASID\MicroServices-Patterns\MonoRepository_MicroServices\town" />
+      <recent name="C:\Users\Neon\Documents\Universidade\4º Ano\ASID\MicroServices-Patterns\MonoRepository_MicroServices\teacher" />
+      <recent name="C:\Users\Neon\Documents\Universidade\4º Ano\ASID\MicroServices-Patterns\MonoRepository_MicroServices\parent" />
+      <recent name="C:\Users\Neon\Documents\Universidade\4º Ano\ASID\MicroServices-Patterns\MonoRepository_MicroServices\mark" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+    <configuration name="ApiExternaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="apiexterna" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apiExterna.ApiExternaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClubApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="club" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.club.ClubApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.discovery.DiscoveryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="employee" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.employee.EmployeeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mark" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mark.MarkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="parent" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.parent.ParentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="student" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.student.StudentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeacherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="teacher" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.teacher.TeacherApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TownApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="town" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.town.TownApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="view" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.view.ViewApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -265,6 +259,13 @@
       <option name="presentableId" value="Default" />
       <updated>1713626957367</updated>
       <workItem from="1713626958440" duration="23000" />
+      <workItem from="1715979489794" duration="3739000" />
+      <workItem from="1715983269840" duration="21064000" />
+      <workItem from="1716043221889" duration="8192000" />
+      <workItem from="1716134918245" duration="86000" />
+      <workItem from="1716135219000" duration="90000" />
+      <workItem from="1717028816079" duration="9134000" />
+      <workItem from="1717286113779" duration="15312000" />
     </task>
     <servers />
   </component>

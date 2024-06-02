@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/student/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/employee/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/mark/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/teacher/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/town/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/view/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/parent/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/apiExterna/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/club/pom.xml" />
+        <option value="$PROJECT_DIR$/MonoRepository_MicroServices/config-server/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

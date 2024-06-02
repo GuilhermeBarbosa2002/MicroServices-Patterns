@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
   instance:
     prefer-ip-address: true
 spring:
@@ -11,7 +11,7 @@ spring:
     name: view
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/view
+    url: jdbc:postgresql://database-svc:80/view
     username: postgres
     password: postgres
   jpa:
@@ -20,12 +20,8 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   kafka:
-    bootstrap-servers: localhost:29092
+    bootstrap-servers: kafka-0.kafka-cluster.default.svc.cluster.local:9092
     consumer:
       group-id: "students"
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-management:
-  tracing:
-    sampling:
-      probability: 1.0

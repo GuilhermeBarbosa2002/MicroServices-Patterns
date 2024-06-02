@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teachers
+  labels:
+    app: teachers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teachers
+  template:
+    metadata:
+      labels:
+        app: teachers
+    spec:
+      containers:
+      - name: teachers
+        image: capitale48/teachers-service
+        imagePullPolicy: Always
+        env:
+        - name: CONFIG_SERVER_ADDRESS
+          value: "http://config-server-svc:80"
+        ports:
+        - containerPort: 8030
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: teachers-svc
+spec:
+  selector:
+    app: teachers
+  ports:
+  - port: 80
+    targetPort: 8030
